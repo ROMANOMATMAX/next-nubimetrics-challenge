@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const AddRecipeIconWrapper = styled.div`
-  position: absolute;
+  position: fixed;
   bottom: 24px;
   right: 10px;
   width: 56px;

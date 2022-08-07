@@ -15,7 +15,7 @@
     {
       "name": "humita",
       "review": 3,
-      "alreadyCooked": false,
+      "alreadyCooked": true,
       "ingredients": [
         "choclo",
         "queso",
@@ -28,7 +28,7 @@
       "id": 3,
       "name": "guiso",
       "review": 4,
-      "alreadyCooked": false,
+      "alreadyCooked": true,
       "ingredients": [
         "papa",
         "peceto",

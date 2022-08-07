@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { AsideImageBanner, Logo } from '../components/common';
 import { RecipesTable, AddRecipeButton, RecipeForm } from '../components/recipes';
+import { SearchControl } from '../components/recipes/search/SearchControl';
 import { getRecipes } from '../data/recipes'
 
 const MainPageLayout = styled.div`
@@ -9,6 +10,7 @@ const MainPageLayout = styled.div`
   grid-column-gap: 3rem;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
+  position: relative;
   grid-template-areas: 
     "header header"
     "aside aside"
@@ -36,6 +38,10 @@ const MainContent = styled.section`
   }
 `
 
+const Container = styled.div`
+  position: relative;
+`;
+
 function App() {
   const [modalOpened, setModalOpened] = useState(false);
   const [recipes, setRecipes] = useState([]);
@@ -45,7 +51,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <Container>
       <MainPageLayout>
         <Header>
           <Logo />
@@ -54,6 +60,7 @@ function App() {
           <AsideImageBanner />
         </Aside>
         <MainContent>
+          <SearchControl />
           <RecipesTable
             recipes={recipes}
           />
@@ -63,7 +70,7 @@ function App() {
         changeModalStatus={setModalOpened}
       />
       { modalOpened && <RecipeForm changeModalStatus={setModalOpened}/>}
-    </>
+    </Container>
   )
 }
 

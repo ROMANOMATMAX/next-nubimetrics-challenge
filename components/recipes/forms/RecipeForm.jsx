@@ -30,6 +30,8 @@ const Form = styled.form`
   max-height: 100vh;
 
   @media (min-width: 768px) {
+    position: fixed;
+    height: 100%;
     max-height: none;
   }
 `;

@@ -3,10 +3,6 @@
   padding: 0;
 }
 
-body {
-  position: relative;
-}
-
 input::placeholder {
   padding-left: 8px;
   font-family: "Poppins", Times, serif;
