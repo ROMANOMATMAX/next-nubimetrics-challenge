@@ -40,10 +40,6 @@ export const SearchControl = ({ recipes, setRecipes }) => {
   const [keySearch, setKeySearch] = useState('');
   const searchInput = useRef();
 
-  const handleOnStartSearch = () => {
-    console.log('buscar');
-  };
-
   return (
     <SearchContainer>
       <SearchInput type="text" placeholder="Buscador" />

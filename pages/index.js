@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { AsideImageBanner, Logo } from '../components/common';
 import { RecipesTable, AddRecipeButton, RecipeForm } from '../components/recipes';
-import { CookedFilter } from '../components/recipes/already-cooked-filter/CookedFilter';
+import { FilterContainer } from '../components/recipes/already-cooked-filter/FilterContainer';
 import { SearchControl } from '../components/recipes/search/SearchControl';
 import { getRecipes } from '../data/recipes'
 
@@ -79,9 +79,9 @@ function App() {
         <MainContent>
           <FilteringContainer>
             <SearchControl />
-            <CookedFilter
-              setRecipes={setRecipes}
+            <FilterContainer
               allRecipes={allRecipes}
+              setRecipes={setRecipes}
             />
           </FilteringContainer>
           <RecipesTable
