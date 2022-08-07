@@ -122,7 +122,7 @@ export const RecipeForm = ({ changeModalStatus }) => {
           <FormSectionTitle>Reseñas</FormSectionTitle>
           <RadioInputContainer>
             <div>
-              <input type="radio" id="huey" name="drone" value="huey" checked />
+              <input type="radio" id="huey" name="drone" value="huey" />
               <RadioInputLabel>1</RadioInputLabel>
             </div>
             <div>

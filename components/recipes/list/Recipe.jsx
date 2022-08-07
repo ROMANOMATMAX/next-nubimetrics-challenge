@@ -57,7 +57,7 @@ export const Recipe = ({ recipe }) => {
           {name}
         </RecipeName>
         <RecipeReview>
-          <RatingStar review={ review } />
+          <RatingStar review={ review } name={name}/>
         </RecipeReview>
         <RecipeStatus>
           <ToggleSwitch active={alreadyCooked}/>

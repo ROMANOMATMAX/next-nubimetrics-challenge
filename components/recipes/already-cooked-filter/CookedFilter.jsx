@@ -46,7 +46,7 @@ export const CookedFilter = ({ setRecipes, allRecipes }) => {
         id="cooked-filter" 
         onChange={(event) => changeAlreadyCookedFilter(event.target.value)}  
       >
-      <option value="all" selected>Todos</option>
+      <option value="all">Todos</option>
       <option value="cooked">Activos</option>
       <option value="uncooked">Inactivos</option>
       </select>

@@ -2,21 +2,6 @@ import React from 'react'
 import styled from 'styled-components';
 import { MAXIMUM_RATING } from './constants';
 
-const Star = styled.span`
-  height: 15px;
-  width: 15px;
-  font-size: 0.875rem;
-  color: #FFD19A;
-  background-color: unset;
-  border: none;
-`
-const NoStar = styled.span`
-  font-size: 0.875rem;
-  color: #E9DBCB;
-  background-color: unset;
-  border: none;
-`
-
 const StarOn = styled.div`
   height: 15px;
   width: 15px;
@@ -40,7 +25,7 @@ const StarsContainer = styled.div`
   gap: 5px;
 `
 
-export const RatingStar = ({ review }) => {
+export const RatingStar = ({ review, name }) => {
   const starOff = MAXIMUM_RATING - review;
   const positiveStarsList = Array.apply(null, {length: review}).map(Number.call, Number);
   const nonPositiveStarsList = Array.apply(null, {length: starOff}).map(Number.call, Number);
@@ -48,10 +33,10 @@ export const RatingStar = ({ review }) => {
   return (
     <StarsContainer>
       {positiveStarsList.map((star) => (
-        <StarOn />
+        <StarOn key={`startOn-${review}-${name}-${star}`}/>
       ))}
       {nonPositiveStarsList.map((noStar) => (
-        <StarOff />
+        <StarOff key={`startOff-${review}-${name}-${noStar}`}/>
       ))}
     </StarsContainer>
   )
