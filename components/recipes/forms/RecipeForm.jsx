@@ -23,6 +23,7 @@ const FormWrapper = styled.div`
 `;
 
 const Form = styled.form`
+  z-index: 3;
   position: relative;
   width: 29rem;
   background: #fff;

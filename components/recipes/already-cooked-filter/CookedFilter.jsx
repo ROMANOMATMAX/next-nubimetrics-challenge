@@ -6,7 +6,7 @@ const SwithContainter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 22%;
+  width: 100%;
   height: 48px;
   background-color: #EBF0F3;
   border-radius: 16px;
@@ -15,6 +15,12 @@ const SwithContainter = styled.div`
   font-size: 0.875rem;
   line-height: 1.5rem;
   grid-area: name;
+  margin-bottom: 10px;
+
+  @media (min-width: 768px) {
+    width: 22%;
+    margin-bottom: 0;
+  }
 `;
 
 export const CookedFilter = ({ setRecipes, allRecipes }) => {
