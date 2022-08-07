@@ -7,6 +7,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 const SearchContainer = styled.div`
   background: white;
   position: relative;
+  width: 50%;
 `;
 
 const SearchInput = styled.input`
@@ -15,7 +16,7 @@ const SearchInput = styled.input`
   border: none;
   box-sizing: border-box;
   height: 48px;
-  width: 50%;
+  width: 100%;
   padding: 20px 60px 20px 35px;
   display: block;
 `;

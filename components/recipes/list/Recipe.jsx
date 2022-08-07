@@ -49,8 +49,7 @@ const Divider = styled.hr`
 
 export const Recipe = ({ recipe }) => {
   const { name, review, alreadyCooked } = recipe;
-  console.log('review', review);
-  console.log('alreadyCooked', alreadyCooked);
+
   return (
     <>
       <RecipeLayout>

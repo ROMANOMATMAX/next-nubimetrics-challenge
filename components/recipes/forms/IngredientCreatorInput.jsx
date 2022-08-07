@@ -30,16 +30,13 @@ const AddIngredientIconWrapper = styled.div`
 `;
 
 export const IngredientCreatorInput = ({ setIngredients, ingredients }) => {
-  console.log('el array', ingredients);
   const [ingredient, setIngredient] = useState('');
   const inputIngredient = useRef();
 
   useEffect(() => {
-    console.log(ingredient);
   }, [ingredient]);
 
   const addIngredientToList = () => {
-    console.log('Need to add the ingredient to the list');
     setIngredients([
       ...ingredients,
       {

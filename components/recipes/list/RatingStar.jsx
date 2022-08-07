@@ -41,12 +41,10 @@ const StarsContainer = styled.div`
 `
 
 export const RatingStar = ({ review }) => {
-  console.log('review type ', typeof review)
   const starOff = MAXIMUM_RATING - review;
   const positiveStarsList = Array.apply(null, {length: review}).map(Number.call, Number);
   const nonPositiveStarsList = Array.apply(null, {length: starOff}).map(Number.call, Number);
-  console.log(positiveStarsList);
-  console.log(nonPositiveStarsList);
+
   return (
     <StarsContainer>
       {positiveStarsList.map((star) => (

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { AsideImageBanner, Logo } from '../components/common';
 import { RecipesTable, AddRecipeButton, RecipeForm } from '../components/recipes';
+import { CookedFilter } from '../components/recipes/already-cooked-filter/CookedFilter';
 import { SearchControl } from '../components/recipes/search/SearchControl';
 import { getRecipes } from '../data/recipes'
 
@@ -42,12 +43,28 @@ const Container = styled.div`
   position: relative;
 `;
 
+const FilteringContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 15px 0 15px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    padding: 0;
+  }
+`;
+
 function App() {
   const [modalOpened, setModalOpened] = useState(false);
+  const [allRecipes, setAllRecipes] = useState([]);
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    getRecipes().then(data => setRecipes(data));
+    getRecipes().then(data => {
+      setAllRecipes(data);
+      setRecipes(data);
+    });
   }, []);
 
   return (
@@ -60,7 +77,13 @@ function App() {
           <AsideImageBanner />
         </Aside>
         <MainContent>
-          <SearchControl />
+          <FilteringContainer>
+            <SearchControl />
+            <CookedFilter
+              setRecipes={setRecipes}
+              allRecipes={allRecipes}
+            />
+          </FilteringContainer>
           <RecipesTable
             recipes={recipes}
           />
