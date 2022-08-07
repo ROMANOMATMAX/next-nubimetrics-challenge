@@ -1,8 +1,15 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+First be sure you have Node JS and npm installed.
 
-First, run the development server:
+Second, don't forget to run npm install to download all the required dependencies (For that remember to open a terminal in the root of the project)
+
+Third, due we are simulate for us an API of recipes using json-server, you'll need to install it and then run it. So execute in the terminal:
+* npm install -g json-server (to install)
+* npx json-server --port 3001 --watch db.json (to run)
+
+Fourth, run the development server:
 
 ```bash
 npm run dev
