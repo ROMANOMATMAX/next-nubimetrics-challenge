@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { ToggleSwitch } from '../list/ToggleSwitch';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

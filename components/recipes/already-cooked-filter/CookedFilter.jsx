@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 import styled from 'styled-components';
 import { ACTIVE_FEILD_FILTER_KEY } from './constant';
-import { getRecipes, getRecipesFilterIfAlreadyCooked } from '../../../data/recipes';
 
 const SwithContainter = styled.div`
   display: flex;
@@ -33,7 +32,7 @@ export const CookedFilter = ({ setRecipes, allRecipes }) => {
 
   return (
     <SwithContainter>
-      <label htmlFor='cooked-filter'>Choose a car:</label>
+      <label htmlFor='cooked-filter'>Cocido antes:</label>
 
       <select
         ref={alreadyCookInput}
